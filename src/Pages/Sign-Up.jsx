@@ -9,6 +9,10 @@ import '../Styles/Sign-Up.css'
 
 function SignUp(){
 
+/**
+ * If the user is not signed in, then the user will be presented with a form to sign up. If the user is
+ * signed in, then the user will be redirected to the home page.
+ */
     const { signInGoogle, signed } = useContext(AuthGoogleContext)
 
     async function loginGoogle(){
