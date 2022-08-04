@@ -8,10 +8,6 @@
   <a href="#memo-licença">Licença</a>
 </p>
 
-<p align="center">
-  <img alt="" src=".github/logo-plane.svg" width="10%">
-</p>
-
 <br>
 
 <h1>Desktop</h1>
@@ -31,5 +27,18 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML
 - CSS
 - JavaScript
+- Firebase
+- React
 
 ## 🚧 Projeto
+
+Construir um Website de Carros.
+
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE) para mais detalhes.
+
+---
+
+Feito com ♥ by JulioAmaral007
