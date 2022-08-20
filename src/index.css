@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,10 +6,10 @@
 }
 
 /* --- barra lateral --- */
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: var(--first-color);
   border-radius: 10px;
-} 
+}
 
 :root {
   --header-height: 3.5rem;
@@ -27,13 +27,13 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Exo', sans-serif;
+  --body-font: "Exo", sans-serif;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
   --font-medium: 500;
@@ -50,8 +50,8 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
@@ -59,15 +59,20 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

@@ -1,37 +1,37 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
-import Input from "../Components/Input";
 import Button from "../Components/Button";
+import Input from "../Components/Input";
 
 import { FaGithub, FaGoogle, FaFacebook } from "react-icons/fa";
 
 import background from "../Images/offer.png";
+
 import "../CSS/Sign-Up.css";
 
-export default function SignUp() {
-  const { signup } = useAuth();
+export default function LogIn() {
+  const { login } = useAuth();
   const navigate = useNavigate();
 
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
 
-  const handleSignup = () => {
-    if (!email | !name | !senha) {
+  const handleLogin = () => {
+    if (!email | !senha) {
       setError("Preencha todos os campos");
       return;
     }
 
-    const res = signup(email, senha);
+    const res = login(email, senha);
 
     if (res) {
       setError(res);
       return;
     }
 
-    navigate("/");
+    navigate("/home");
   };
 
   return (
@@ -57,17 +57,6 @@ export default function SignUp() {
         </div>
 
         <form action="">
-          <label for="name">
-            <span>Name</span>
-            <Input
-              type="text"
-              id="name"
-              name="name"
-              value={name}
-              onChange={(e) => [setName(e.target.value), setError("")]}
-            />
-          </label>
-
           <label for="email">
             <span>E-mail</span>
             <Input
@@ -90,10 +79,10 @@ export default function SignUp() {
             />
           </label>
 
-          <Button Text="Sign-Up" onClick={handleSignup} />
+          <Button Text="Log-In" onClick={handleLogin} />
 
           <p>
-            Already have an account: <Link to="/">Sign-Up</Link>
+            Don't have an account: <Link to="/signup">Register</Link>
           </p>
         </form>
       </main>

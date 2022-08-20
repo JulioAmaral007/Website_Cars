@@ -1,18 +1,17 @@
-import React from 'react'
+import React from "react";
+import { AuthProvider } from "./Contexts/auth";
 
-import AuthGoogleProvider from './Contexts/authGoogle'
-import AppRoutes from './Routes/routes'
+import AppRoutes from "./Routes/routes";
 
-import './App.css'
-
-function App  () {
-
+function App() {
   return (
-    <div className='App'>
-      <AuthGoogleProvider>
-        <AppRoutes />
-      </AuthGoogleProvider>
-    </div>    
+    <div className="App">
+      <>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </>
+    </div>
   );
 }
 

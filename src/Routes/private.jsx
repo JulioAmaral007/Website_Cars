@@ -1,12 +1,11 @@
-import React, { useContext } from "react"
-import { Navigate, Outlet } from "react-router"
-import { AuthGoogleContext } from "../Contexts/authGoogle"
+import React, { useContext } from "react";
+import useAuth from "../Hooks/useAuth";
+import LogIn from "../Pages/Log-In";
 
-function PrivateRoutes(){
-    const {signed} = useContext(AuthGoogleContext)
+function PrivateRoutes({ Item }) {
+  const { signed } = useAuth();
 
-    return signed ? <Outlet /> : <Navigate to="/" />
+  return signed > 0 ? <Item /> : <LogIn />;
+}
 
-    }
-
-export default PrivateRoutes
+export default PrivateRoutes;
