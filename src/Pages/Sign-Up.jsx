@@ -93,7 +93,7 @@ export default function SignUp() {
           <Button Text="Sign-Up" onClick={handleSignup} />
 
           <p>
-            Already have an account: <Link to="/">Sign-Up</Link>
+            Already have an account: <Link to="/">Log-In</Link>
           </p>
         </form>
       </main>

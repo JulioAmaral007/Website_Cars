@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import useAuth from "../Hooks/useAuth";
 import { useNavigate } from "react-router";
-import Button from "../Components/Button";
 
 import {
   FaBolt,
@@ -11,7 +10,6 @@ import {
   FaFacebook,
   FaTwitter,
   FaInstagram,
-  FaExternalLinkAlt,
 } from "react-icons/fa";
 
 import favicon from "../Images/favicon.png";
@@ -72,7 +70,9 @@ export default function Home() {
           </ul>
         </nav>
 
-        <Button Text="Exit" onClick={() => [signout(), navigate("/")]}></Button>
+        <button className="exit" onClick={() => [signout(), navigate("/")]}>
+          Exit
+        </button>
       </header>
 
       <section class="home" id="home">

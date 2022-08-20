@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import useAuth from "../Hooks/useAuth";
-import LogIn from "../Pages/Log-In";
+import SignUp from "../Pages/Sign-Up";
 
-function PrivateRoutes({ Item }) {
+const PrivateRoutes = ({ Item }) => {
   const { signed } = useAuth();
 
-  return signed > 0 ? <Item /> : <LogIn />;
-}
+  return signed > 0 ? <Item /> : <SignUp />;
+};
 
 export default PrivateRoutes;

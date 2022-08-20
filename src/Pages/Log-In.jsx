@@ -11,7 +11,7 @@ import background from "../Images/offer.png";
 import "../CSS/Sign-Up.css";
 
 export default function LogIn() {
-  const { login } = useAuth();
+  const { signin } = useAuth();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -24,7 +24,7 @@ export default function LogIn() {
       return;
     }
 
-    const res = login(email, senha);
+    const res = signin(email, senha);
 
     if (res) {
       setError(res);
